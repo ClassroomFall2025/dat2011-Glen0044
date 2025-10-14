@@ -12,12 +12,12 @@ class QuanLySV:
                 java = float(input("Điểm Java: "))
                 html = float(input("Điểm Htmk: "))
                 css = float(input("Điểm Css: "))
-                sv = svpl.SinhVienIT(ho_ten, nganh_hoc, java, html, css)
+                sv = svpl.SVIT(ho_ten, nganh_hoc, java, html, css)
                 self.dssv.append(sv)
             elif nganh_hoc.lower() == "biz":
                 marketing = float(input("Điểm Marketing: "))
                 sales = float(input("Điểm Sales: "))
-                sv = svpl.SinhVienBiz(ho_ten, nganh_hoc, marketing, sales)
+                sv = svpl.SVBiz(ho_ten, nganh_hoc, marketing, sales)
                 self.dssv.append(sv)
             elif nganh_hoc.lower() == "exit":
                 print("Kết thúc nhập thông tin sinh viên")

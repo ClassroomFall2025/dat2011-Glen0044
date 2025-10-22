@@ -1,5 +1,5 @@
 from quanlynv import *
-ql = QuanLynv()
+ql = Quanlynv()
 menu = """
 1. Nhập danh sách nhân viên
 2. Đọc thông tin nhân viên
@@ -16,26 +16,35 @@ while True:
     lua_chon = input("Nhập lựa chọn của bạn (nhấn 0 để thoát): ")
     match lua_chon:
         case "0":
-            print("Thoát chương trình")
+            print("---Thoát chương trình---")
             break
         case "1":
-            print("xuất thông tin nhân viên")
+            print("---nhập thông tin nhân viên---")
             ql.nhap_dsnv()
         case "2":
-            print("Đọc thông tin nhân viên")
+            print("---Đọc thông tin nhân viên---")
+            ql.xuat_dsnv()
         case "3":
+            print("---Tìm nhân viên theo mã---")
             ql.tim_nhan_vien_theo_ma()
         case "4":
-            pass
+            print("---Xóa nhân viên---")
+            ma_nv = input("Nhập mã nhân viên cần xóa: ")
+            ql.xoa_nhan_vien(ma_nv)
         case "5":
-            pass
+            print("---Cập nhật thông tin nhân viên---")
+            ql.cap_nhat_thong_tin_nhan_vien()
         case "6":
+            print("---Tìm nhân viên theo khoảng lương---")
             ql.tim_nhan_vien_theo_khoang_luong()
         case "7":
+            print("---Sắp xếp nhân viên theo họ và tên---")
             ql.sap_xep_theo_ho_ten()
         case "8":
+            print("---Sắp xếp nhân viên theo thu nhập---")
             ql.sap_xep_theo_thu_nhap()
         case "9":
+            print("---5 nhân viên có thu nhập cao nhất---")
             ql.xuat_5_nhan_vien_thu_nhap_cao_nhat()
         case _:
-            print("Lựa chọn không hợp lệ, vui lòng chọn lại.")
+            print("---Lựa chọn không hợp lệ, vui lòng chọn lại.---")
